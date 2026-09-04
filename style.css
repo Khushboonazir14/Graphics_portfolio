@@ -1,0 +1,145 @@
+/* =========================================
+   COLOR PALETTE & VARIABLES (Sama Zehra Theme)
+   ========================================= */
+:root {
+    --bg-primary: #FAF9F6;
+    --text-primary: #1C1C1C;
+    --text-muted: #6B6B6B;
+    --border-color: #E2E2E2;
+    --gold-accent: #9f895b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+.brand-font {
+    font-family: 'Cinzel Decorative', 'Playfair Display', serif;
+    letter-spacing: 0.05em;
+    color: var(--gold-accent);
+}
+
+.py-section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.bg-light-soft {
+    background-color: #ffffff;
+}
+
+/* Navbar & Brand Logo Styling */
+.navbar {
+    padding: 1.2rem 0;
+    background: transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar.scrolled {
+    background: rgba(250, 249, 246, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(159, 137, 91, 0.2);
+}
+
+.brand-logo-img {
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #9f895b;
+}
+
+.nav-link {
+    color: var(--text-primary) !important;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--gold-accent) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    background: linear-gradient(rgba(250, 249, 246, 0.92), rgba(250, 249, 246, 0.92)), url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2000&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+}
+
+.btn-custom {
+    border-width: 1px;
+    border-color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--gold-accent);
+    border-color: var(--gold-accent);
+    color: #fff;
+}
+
+/* =========================================
+   SHOWCASE & FACTORY IMAGE CONTAINERS
+   ========================================= */
+.showcase-wrapper img, 
+.factory-grid-box img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* =========================================
+   COLLECTION CARDS & SWIPER (Fixed Background & Cropping)
+   ========================================= */
+.collection-card {
+    border-radius: 12px !important;
+    overflow: hidden;
+    background-color: transparent !important; /* Removed dark blue background */
+    box-shadow: none !important; /* Removed box shadow from container */
+    height: auto; /* Allow height to adjust naturally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Prevents cropping */
+    border-radius: 12px !important;
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Added shadow directly to image */
+}
+
+.collection-card:hover img {
+    transform: scale(1.03);
+}
+
+/* Editorial Form */
+.editorial-form .minimal-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+    padding: 0.75rem 0;
+    font-size: 0.95rem;
+    box-shadow: none !important;
+    transition: border-color 0.3s ease;
+}
+
+.editorial-form .minimal-input:focus {
+    border-color: var(--gold-accent);
+}
