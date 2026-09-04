@@ -68,10 +68,12 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero-section {
     min-height: 100vh;
     padding-top: 80px;
-    background: linear-gradient(rgba(250, 249, 246, 0.92), rgba(250, 249, 246, 0.92)), url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2000&auto=format&fit=crop') no-repeat center center;
+    /* Kapdon wali image hata kar ek clean, abstract graphic design background lagaya hai */
+    background: linear-gradient(rgba(250, 249, 246, 0.92), rgba(250, 249, 246, 0.92)), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop') no-repeat center center;
     background-size: cover;
 }
 
