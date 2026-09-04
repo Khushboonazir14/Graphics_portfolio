@@ -1,12 +1,12 @@
 /* =========================================
-   COLOR PALETTE & VARIABLES (Sama Zehra Theme)
+   COLOR PALETTE & VARIABLES (Dark Green Theme)
    ========================================= */
 :root {
-    --bg-primary: #FAF9F6;
-    --text-primary: #1C1C1C;
-    --text-muted: #6B6B6B;
-    --border-color: #E2E2E2;
-    --gold-accent: #9f895b;
+    --bg-primary: #FDFBFB;
+    --text-primary: #1A0505; /* Deep dark text for high visibility */
+    --text-muted: #3E4B43; /* Darker muted text matching green vibes */
+    --border-color: #D3C5C5;
+    --brand-accent: #1A432B; /* Deep Forest Green */
 }
 
 body {
@@ -14,12 +14,25 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
+    font-weight: 500; 
 }
 
+/* Override inline Gold/Maroon colors automatically */
 .brand-font {
     font-family: 'Cinzel Decorative', 'Playfair Display', serif;
     letter-spacing: 0.05em;
-    color: var(--gold-accent);
+    color: var(--brand-accent) !important; 
+    font-weight: 700 !important; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+    font-weight: 500;
 }
 
 .py-section {
@@ -39,11 +52,11 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(250, 249, 246, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 0.8rem 0;
-    border-bottom: 1px solid rgba(159, 137, 91, 0.2);
+    border-bottom: 2px solid rgba(26, 67, 43, 0.15); /* Green tint border */
 }
 
 .brand-logo-img {
@@ -51,45 +64,54 @@ body {
     width: 40px !important;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #9f895b;
+    border: 2px solid var(--brand-accent);
 }
 
 .nav-link {
     color: var(--text-primary) !important;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-left: 1.5rem;
+    font-weight: 700; 
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--gold-accent) !important;
+    color: var(--brand-accent) !important;
 }
 
-/* Hero Section */
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
     padding-top: 80px;
-    /* Kapdon wali image hata kar ek clean, abstract graphic design background lagaya hai */
-    background: linear-gradient(rgba(250, 249, 246, 0.92), rgba(250, 249, 246, 0.92)), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop') no-repeat center center;
+    background: linear-gradient(rgba(253, 251, 251, 0.92), rgba(253, 251, 251, 0.92)), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2000&auto=format&fit=crop') no-repeat center center;
     background-size: cover;
 }
 
+/* Buttons */
 .btn-custom {
-    border-width: 1px;
-    border-color: var(--text-primary);
+    border-width: 2px;
+    border-color: var(--brand-accent) !important;
+    color: var(--brand-accent) !important;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 700;
     transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
-    background-color: var(--gold-accent);
-    border-color: var(--gold-accent);
-    color: #fff;
+    background-color: var(--brand-accent) !important;
+    color: #fff !important;
+}
+
+/* Submit Button Override */
+button[type="submit"] {
+    background-color: var(--brand-accent) !important;
+    border-color: var(--brand-accent) !important;
+    color: #fff !important;
+    font-weight: 700 !important;
 }
 
 /* =========================================
@@ -104,14 +126,14 @@ body {
 }
 
 /* =========================================
-   COLLECTION CARDS & SWIPER (Fixed Background & Cropping)
+   COLLECTION CARDS & SWIPER 
    ========================================= */
 .collection-card {
     border-radius: 12px !important;
     overflow: hidden;
-    background-color: transparent !important; /* Removed dark blue background */
-    box-shadow: none !important; /* Removed box shadow from container */
-    height: auto; /* Allow height to adjust naturally */
+    background-color: transparent !important;
+    box-shadow: none !important;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,28 +142,35 @@ body {
 .collection-card img {
     width: 100%;
     height: auto;
-    object-fit: contain; /* Prevents cropping */
+    object-fit: contain;
     border-radius: 12px !important;
     transition: transform 0.5s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Added shadow directly to image */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .collection-card:hover img {
     transform: scale(1.03);
 }
 
+/* Swiper Pagination dots Green */
+.swiper-pagination-bullet-active {
+    background-color: var(--brand-accent) !important;
+}
+
 /* Editorial Form */
 .editorial-form .minimal-input {
     background: transparent;
     border: none;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
     border-radius: 0;
     padding: 0.75rem 0;
     font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 600; 
     box-shadow: none !important;
     transition: border-color 0.3s ease;
 }
 
 .editorial-form .minimal-input:focus {
-    border-color: var(--gold-accent);
+    border-color: var(--brand-accent);
 }
